@@ -17,10 +17,6 @@ public class Hand : MonoBehaviour
         {
            UseHand();
         }
-        if(input == 0 && isUsingItem)
-        {
-            StopUsingHand();
-        }
     }
 
     public void UseHand()
@@ -39,6 +35,7 @@ public class Hand : MonoBehaviour
 
     public void DropItem()
     {
+        heldItem.DropItem();
         Destroy(heldItem.gameObject);
         heldItem = null;
     }
@@ -46,14 +43,20 @@ public class Hand : MonoBehaviour
     public void PickUpItem(Item item)
     {
         heldItem = item;
+        heldItem.PickUpItem();
     }
 
-    public ItemType GetType()
+    public ItemType GetItemType()
     {
         if(heldItem)
           return heldItem.GetItemType();
         else
           return ItemType.NONE;
+    }
+
+    public Item GetHeldItem()
+    {
+        return heldItem;
     }
 
 }

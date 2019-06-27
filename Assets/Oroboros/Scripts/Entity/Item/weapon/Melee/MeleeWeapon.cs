@@ -47,6 +47,16 @@ public class MeleeWeapon : Item
         }
     }
 
+    public override void PickUpItem()
+    {
+
+    }
+
+    public override void DropItem()
+    {
+
+    }
+
     public void OnRCMHit(Transform hit)
     {
 
@@ -61,12 +71,13 @@ public class MeleeWeapon : Item
             {
                 RayCastMelee rcm = t.GetComponent<RayCastMelee>();
                 rcm.SetWeight(weight.getWeight());
-                hitPoints.Add(rcm);
 
                 if (rcm.OwnerRigidbody == null)
                 {
                     rcm.OwnerRigidbody = this.owner;
                 }
+
+                hitPoints.Add(rcm);
             }
         }
     }

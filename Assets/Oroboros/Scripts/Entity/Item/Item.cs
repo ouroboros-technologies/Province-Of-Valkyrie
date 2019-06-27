@@ -8,7 +8,7 @@ public enum ItemType
   MELEE, NONE
 }
 
-public abstract class Item : NetwoekBehaviour
+public abstract class Item : NetworkBehaviour
 {
     protected ItemType type;
     protected Rigidbody owner;
@@ -21,5 +21,15 @@ public abstract class Item : NetwoekBehaviour
     public ItemType GetItemType()
     {
       return type;
+    }
+
+    public Rigidbody GetOwner()
+    {
+        return owner;
+    }
+
+    public void SetOwner(Rigidbody rb)
+    {
+        owner = rb;
     }
 }

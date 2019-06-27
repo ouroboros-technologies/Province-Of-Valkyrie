@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-[RequireComponent(typeof(MoveScript))]
+[RequireComponent(typeof(Player))]
 public class PlayerInputManager : NetworkBehaviour
 {
 

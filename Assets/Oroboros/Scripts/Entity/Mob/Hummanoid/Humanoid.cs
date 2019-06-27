@@ -30,7 +30,8 @@ public class Humanoid : Mob
         base.Start();
         stats = GetComponent<Stats>();
 
-        if(leftHand.heldItem) leftHand.heldItem.owner = rb;
+        if(leftHand.GetHeldItem()) leftHand.GetHeldItem().SetOwner(rb);
+        if(rightHand.GetHeldItem()) rightHand.GetHeldItem().SetOwner(rb);
     }
 
     new protected void Update()
@@ -43,13 +44,19 @@ public class Humanoid : Mob
 
     private void UseHands()
     {
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            leftHand.StopUsingHand();
+            rightHand.StopUsingHand();
+        }
+
         if(leftHandInput > 0)
         {
-            if(leftHand.GetType() == ItemType.MELEE && state == HumanoidState.Combat)
+            if(leftHand.GetItemType() == ItemType.MELEE && state == HumanoidState.Combat)
             {
                 anim.SetBool("IsPerformingAction", true);
             }
-            else if(leftHand.GetType() == ItemType.MELEE && state == HumanoidState.Idle)
+            else if(leftHand.GetItemType() == ItemType.MELEE && state == HumanoidState.Idle)
             {
                 state = HumanoidState.Combat;
             }
@@ -62,11 +69,11 @@ public class Humanoid : Mob
 
         if(rightHandInput > 0)
         {
-            if(rightHand.GetType() == ItemType.MELEE && state == HumanoidState.Combat)
+            if(rightHand.GetItemType() == ItemType.MELEE && state == HumanoidState.Combat)
             {
                 anim.SetBool("IsPerformingAction", true);
             }
-            else if(rightHand.GetType() == ItemType.MELEE && state == HumanoidState.Idle)
+            else if(rightHand.GetItemType() == ItemType.MELEE && state == HumanoidState.Idle)
             {
                 state = HumanoidState.Combat;
             }

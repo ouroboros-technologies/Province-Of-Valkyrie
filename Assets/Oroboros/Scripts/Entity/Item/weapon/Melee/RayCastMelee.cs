@@ -38,6 +38,7 @@ public class RayCastMelee : MonoBehaviour
         position = transform.position;
         CalculateVelocity(Time.deltaTime);
         CalculateForce();
+        Debug.Log(isEnabled);
         if (isEnabled)
         {
             Ray ray = new Ray(previousPosition, position - previousPosition);
