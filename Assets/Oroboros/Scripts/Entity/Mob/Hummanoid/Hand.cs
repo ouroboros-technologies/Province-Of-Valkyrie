@@ -6,7 +6,6 @@ using Mirror;
 public class Hand : MonoBehaviour
 {
     private float input;
-    [SerializeField]
     private Item heldItem;
 
     private bool isUsingItem;
@@ -48,7 +47,7 @@ public class Hand : MonoBehaviour
         heldItem = item;
     }
 
-    public ItemType GetType()
+    public new ItemType GetType()
     {
         if(heldItem)
           return heldItem.GetItemType();
@@ -56,4 +55,8 @@ public class Hand : MonoBehaviour
           return ItemType.NONE;
     }
 
+    public Item GetHeldItem()
+    {
+        return heldItem;
+    }
 }

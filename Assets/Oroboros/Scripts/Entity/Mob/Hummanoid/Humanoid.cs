@@ -30,7 +30,8 @@ public class Humanoid : Mob
         base.Start();
         stats = GetComponent<Stats>();
 
-        if(leftHand.heldItem) leftHand.heldItem.owner = rb;
+        if(leftHand.GetHeldItem())
+            leftHand.GetHeldItem().SetOwner(rb);
     }
 
     new protected void Update()

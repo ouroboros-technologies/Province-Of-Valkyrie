@@ -47,6 +47,14 @@ public class MeleeWeapon : Item
         }
     }
 
+    public override void PickUpItem(){
+
+    }
+
+    public override void DropItem(){
+      
+    }
+
     public void OnRCMHit(Transform hit)
     {
 
