@@ -29,10 +29,13 @@ public class Humanoid : Mob
     {
         base.Start();
         stats = GetComponent<Stats>();
+
+        if(leftHand.heldItem) leftHand.heldItem.owner = rb;
     }
 
     new protected void Update()
     {
+        if(!isLocalPlayer) return;
         base.Update();
         UseHands();
         anim.SetTrigger("HorSwing");

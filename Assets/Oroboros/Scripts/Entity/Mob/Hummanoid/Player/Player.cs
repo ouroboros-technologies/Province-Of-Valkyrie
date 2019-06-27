@@ -10,14 +10,17 @@ public class Player : Humanoid
     new protected void Start()
     {
         base.Start();
+
         data = new PlayerData();
         data.SetData(this);
+        cam.gameObject.SetActive(isLocalPlayer);
         //Debug.Log(Helper.SerializeObject<PlayerData>(data));
     }
 
     new protected void Update()
     {
         base.Update();
+        if(!isLocalPlayer) return;
         data.SetData(this);
     }
 

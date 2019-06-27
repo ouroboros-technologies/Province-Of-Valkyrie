@@ -102,6 +102,6 @@ public class RayCastMelee : MonoBehaviour
         {
             Gizmos.color = Color.green;
         }
-        Gizmos.DrawSphere(transform.position, GetComponentInParent<Transform>().localScale.x);
+        Gizmos.DrawSphere(transform.position, GetComponentInParent<Transform>().localScale.x * size);
     }
 }

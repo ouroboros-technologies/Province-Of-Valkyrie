@@ -27,6 +27,9 @@ public class Mob : NetworkBehaviour
     public float lookSensitivity;
     protected HeadLookController hlc;
 
+    //Camera
+    public Camera cam;
+
     //look direction variables
     Quaternion lookDirection;
     Vector3 lookAxis;

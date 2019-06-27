@@ -10,8 +10,6 @@ public class MeleeWeapon : Item
 {
     private List<RayCastMelee> hitPoints;
     private Calculate_Weight weight;
-    [SerializeField]
-    public Rigidbody OwnerRigidbody;
 
     void Start()
     {
@@ -67,7 +65,7 @@ public class MeleeWeapon : Item
 
                 if (rcm.OwnerRigidbody == null)
                 {
-                    rcm.OwnerRigidbody = this.OwnerRigidbody;
+                    rcm.OwnerRigidbody = this.owner;
                 }
             }
         }
