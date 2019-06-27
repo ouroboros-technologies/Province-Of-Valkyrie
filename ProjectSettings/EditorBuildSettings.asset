@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Oroboros/Scenes/MainMenu.unity
-    guid: 95f67549e6cd9054991c72c7d38db256
-  - enabled: 1
     path: Assets/Oroboros/Scenes/Multiplayer-Test.unity
     guid: 93f2f9dc9e840674c8995f32c224cce8
+  - enabled: 1
+    path: Assets/Oroboros/Scenes/MainMenu.unity
+    guid: 95f67549e6cd9054991c72c7d38db256
   - enabled: 1
     path: Assets/Oroboros/Scenes/PlayerTests.unity
     guid: a2df8e85662832846a8c7667e05c0eff
