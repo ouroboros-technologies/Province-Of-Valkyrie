@@ -73,10 +73,10 @@ public class Humanoid : Mob
 
         if(rightHandInput > 0)
         {
-            Debug.Log("Yup");
             if(rightHand.GetItemType() == ItemType.MELEE && state == HumanoidState.Combat)
             {
                 anim.SetBool("IsPerformingAction", true);
+                    Debug.Log("Yup");
             }
             else if(rightHand.GetItemType() == ItemType.MELEE && state == HumanoidState.Idle)
             {
