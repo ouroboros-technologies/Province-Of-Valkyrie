@@ -45,11 +45,7 @@ public class Hand : MonoBehaviour
         heldItem.PickUpItem();
     }
 
-<<<<<<< HEAD
     public ItemType GetItemType()
-=======
-    public new ItemType GetType()
->>>>>>> origin/Fixing_Branch
     {
         if(heldItem)
           return heldItem.GetItemType();
@@ -61,8 +57,4 @@ public class Hand : MonoBehaviour
     {
         return heldItem;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/Fixing_Branch
 }

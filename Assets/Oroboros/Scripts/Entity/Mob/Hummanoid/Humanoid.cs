@@ -30,13 +30,8 @@ public class Humanoid : Mob
         base.Start();
         stats = GetComponent<Stats>();
 
-<<<<<<< HEAD
         if(leftHand.GetHeldItem()) leftHand.GetHeldItem().SetOwner(rb);
         if(rightHand.GetHeldItem()) rightHand.GetHeldItem().SetOwner(rb);
-=======
-        if(leftHand.GetHeldItem())
-            leftHand.GetHeldItem().SetOwner(rb);
->>>>>>> origin/Fixing_Branch
     }
 
     new protected void Update()
