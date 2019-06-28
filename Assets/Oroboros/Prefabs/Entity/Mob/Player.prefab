@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca3c4d2b1bf0ca4b94e848f4dc32f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heldItem: {fileID: 0}
 --- !u!114 &1257617158906911752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca3c4d2b1bf0ca4b94e848f4dc32f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heldItem: {fileID: 0}
 --- !u!1 &7656634836883840381
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +959,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.457
+      objectReference: {fileID: 0}
+    - target: {fileID: 922559780005969444, guid: 9816ac3d0430bfe4180c4542850cba54,
+        type: 3}
+      propertyPath: compressRotation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922559780005969444, guid: 9816ac3d0430bfe4180c4542850cba54,
+        type: 3}
+      propertyPath: syncInterval
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9816ac3d0430bfe4180c4542850cba54, type: 3}
