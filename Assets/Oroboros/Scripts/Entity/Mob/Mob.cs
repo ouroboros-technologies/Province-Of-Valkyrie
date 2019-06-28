@@ -52,6 +52,7 @@ public class Mob : NetworkBehaviour
 
     public void Update()
     {
+        hlc.target = lookTarget.TransformPoint(0, 0, 0);
         if(!isLocalPlayer) return;
         Move();
         Look();
@@ -110,7 +111,6 @@ public class Mob : NetworkBehaviour
 
         head.transform.Rotate(Vector3.right * inputY);
         transform.Rotate(Vector3.up * inputX);
-        hlc.target = lookTarget.TransformPoint(0, 0, 0);
 
         if (float.IsNaN(Mathf.Atan(lookAxis.y / lookAxis.x)) || lookAxis.magnitude < 0.9f)
         {
