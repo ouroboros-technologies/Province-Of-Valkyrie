@@ -57,4 +57,9 @@ public class Hand : MonoBehaviour
     {
         return heldItem;
     }
+
+    public bool isUsingHand()
+    {
+        return isUsingHand;
+    }
 }

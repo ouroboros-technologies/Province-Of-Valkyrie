@@ -44,9 +44,13 @@ public class Humanoid : Mob
 
     private void UseHands()
     {
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle") && leftHand.isUsingHand())
         {
             leftHand.StopUsingHand();
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle") && rightHand.isUsingHand())
+        {
             rightHand.StopUsingHand();
         }
 
@@ -69,6 +73,7 @@ public class Humanoid : Mob
 
         if(rightHandInput > 0)
         {
+            Debug.Log("Yup");
             if(rightHand.GetItemType() == ItemType.MELEE && state == HumanoidState.Combat)
             {
                 anim.SetBool("IsPerformingAction", true);
