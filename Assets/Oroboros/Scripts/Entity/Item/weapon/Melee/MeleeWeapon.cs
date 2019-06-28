@@ -47,6 +47,7 @@ public class MeleeWeapon : Item
         }
     }
 
+<<<<<<< HEAD
     public override void PickUpItem()
     {
 
@@ -55,6 +56,14 @@ public class MeleeWeapon : Item
     public override void DropItem()
     {
 
+=======
+    public override void PickUpItem(){
+
+    }
+
+    public override void DropItem(){
+      
+>>>>>>> origin/Fixing_Branch
     }
 
     public void OnRCMHit(Transform hit)

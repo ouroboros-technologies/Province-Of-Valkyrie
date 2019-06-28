@@ -22,6 +22,7 @@ public abstract class Item : NetworkBehaviour
     {
       return type;
     }
+<<<<<<< HEAD
 
     public Rigidbody GetOwner()
     {
@@ -32,4 +33,12 @@ public abstract class Item : NetworkBehaviour
     {
         owner = rb;
     }
+=======
+    
+    public void SetOwner(Rigidbody rb)
+    {
+        this.owner = rb;
+    }
+    
+>>>>>>> origin/Fixing_Branch
 }
