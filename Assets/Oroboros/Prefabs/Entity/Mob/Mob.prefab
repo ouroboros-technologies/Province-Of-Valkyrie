@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: -3170607401074256379}
   - component: {fileID: 5520288602969286182}
   - component: {fileID: 1541529916272678988}
+  - component: {fileID: 8087908051803555501}
+  - component: {fileID: 1403700112991740495}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Untagged
@@ -146,6 +148,42 @@ MonoBehaviour:
   syncInterval: 0.1
   compressRotation: 0
   target: {fileID: 7100659839603891828}
+--- !u!114 &8087908051803555501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897635774187607578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734b48bea0b204338958ee3d885e11f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncInterval: 0.1
+  compressRotation: 0
+  target: {fileID: 8914320802637577663}
+--- !u!114 &1403700112991740495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897635774187607578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a292fe94d7dee554094b3e45c2efd93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncInterval: 0.1
+  rootNode: {fileID: 887393268344742838}
+  segments: []
+  nonAffectedJoints: []
+  headLookVector: {x: 0, y: 0, z: 1}
+  headUpVector: {x: 0, y: 1, z: 0}
+  target: {x: 0, y: 0, z: 0}
+  effect: 1
+  overrideAnimation: 0
 --- !u!1 &6974895095896434851
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-[RequireComponent(typeof(Rigidbody), typeof(Animator), typeof(HeadLookController))]
+[RequireComponent(typeof(Rigidbody), typeof(Animator), typeof(HeadLookControllerMP))]
 public class Mob : NetworkBehaviour
 {
 
@@ -25,7 +25,7 @@ public class Mob : NetworkBehaviour
     public GameObject head;
     public Transform lookTarget;
     public float lookSensitivity;
-    protected HeadLookController hlc;
+    protected HeadLookControllerMP hlc;
 
     //Camera
     public Camera cam;
@@ -45,7 +45,7 @@ public class Mob : NetworkBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        hlc = GetComponent<HeadLookController>();
+        hlc = GetComponent<HeadLookControllerMP>();
 
         lookAxis = new Vector3(horizontalLookInput, verticalLookInput, 0);
     }

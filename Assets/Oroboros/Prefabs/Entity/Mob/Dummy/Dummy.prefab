@@ -1725,9 +1725,9 @@ GameObject:
   - component: {fileID: 2194014013287169466}
   - component: {fileID: 76851999375904153}
   - component: {fileID: 6406814717470929907}
-  - component: {fileID: 7402406617858722065}
   - component: {fileID: 6818347954667840215}
   - component: {fileID: 1165284838396589578}
+  - component: {fileID: 6074428909073258332}
   m_Layer: 0
   m_Name: Dummy
   m_TagString: Untagged
@@ -1815,7 +1815,7 @@ MonoBehaviour:
   serverOnly: 1
   localPlayerAuthority: 0
   m_AssetId: 
-  m_SceneId: 3906461810
+  m_SceneId: 2486488710
 --- !u!114 &2194014013287169466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1859,44 +1859,6 @@ MonoBehaviour:
   syncInterval: 0.1
   compressRotation: 0
   target: {fileID: 3388841897508451787}
---- !u!114 &7402406617858722065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4753553512622325157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb4fa562d67034868a9aafbe4b663012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rootNode: {fileID: 4746141143115859977}
-  segments:
-  - firstTransform: {fileID: 5046486129179664514}
-    lastTransform: {fileID: 6735037105462436565}
-    thresholdAngleDifference: 30
-    bendingMultiplier: 0.6
-    maxAngleDifference: 90
-    maxBendingAngle: 40
-    responsiveness: 10
-  - firstTransform: {fileID: 5812648942182274613}
-    lastTransform: {fileID: 3304976080085606741}
-    thresholdAngleDifference: 0
-    bendingMultiplier: 0.7
-    maxAngleDifference: 30
-    maxBendingAngle: 80
-    responsiveness: 16
-  nonAffectedJoints:
-  - joint: {fileID: 1717109010588016199}
-    effect: 0.3
-  - joint: {fileID: 1985686198832046754}
-    effect: 0.3
-  headLookVector: {x: 0, y: 0, z: 1}
-  headUpVector: {x: 0, y: 1, z: 0}
-  target: {x: 0, y: 0, z: 0}
-  effect: 1
-  overrideAnimation: 1
 --- !u!114 &6818347954667840215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1944,6 +1906,50 @@ MonoBehaviour:
   xClampAngle: 90
   leftHand: {fileID: 3346288882923141969}
   rightHand: {fileID: 9050937768111312782}
+--- !u!114 &6074428909073258332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753553512622325157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a292fe94d7dee554094b3e45c2efd93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncInterval: 0.1
+  rootNode: {fileID: 3257573606635182991, guid: 2a57f613a2a71714a8d65ffcc542f182,
+    type: 3}
+  segments:
+  - firstTransform: {fileID: 3089521790386746116, guid: 2a57f613a2a71714a8d65ffcc542f182,
+      type: 3}
+    lastTransform: {fileID: 3575646202798928211, guid: 2a57f613a2a71714a8d65ffcc542f182,
+      type: 3}
+    thresholdAngleDifference: 30
+    bendingMultiplier: 0.6
+    maxAngleDifference: 90
+    maxBendingAngle: 40
+    responsiveness: 10
+  - firstTransform: {fileID: 4342097570516370867, guid: 2a57f613a2a71714a8d65ffcc542f182,
+      type: 3}
+    lastTransform: {fileID: 4698721079610208979, guid: 2a57f613a2a71714a8d65ffcc542f182,
+      type: 3}
+    thresholdAngleDifference: 0
+    bendingMultiplier: 0.7
+    maxAngleDifference: 30
+    maxBendingAngle: 80
+    responsiveness: 16
+  nonAffectedJoints:
+  - joint: {fileID: 8880239035857800641, guid: 2a57f613a2a71714a8d65ffcc542f182, type: 3}
+    effect: 0.3
+  - joint: {fileID: 8603569384048537892, guid: 2a57f613a2a71714a8d65ffcc542f182, type: 3}
+    effect: 0.3
+  headLookVector: {x: 0, y: 0, z: 1}
+  headUpVector: {x: 0, y: 1, z: 0}
+  target: {x: 0, y: 0, z: 0}
+  effect: 1
+  overrideAnimation: 1
 --- !u!1 &4904133310403964871
 GameObject:
   m_ObjectHideFlags: 0
