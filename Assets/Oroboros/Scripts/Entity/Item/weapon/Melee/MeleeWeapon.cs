@@ -75,6 +75,7 @@ public class MeleeWeapon : Item
                 if (rcm.OwnerRigidbody == null)
                 {
                     rcm.OwnerRigidbody = this.owner;
+                    Debug.Log(GetOwner().name);
                 }
 
                 hitPoints.Add(rcm);

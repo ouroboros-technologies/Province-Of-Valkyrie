@@ -64,7 +64,6 @@ public class RayCastMelee : MonoBehaviour
         GameObject hitGO = hit.transform.gameObject; // saving it in case we need to do something else with this GO in the future, could be redundant.
         hitGO.GetComponent<Stats>().TakeDamage(1); // passing in 1 damage for the time being
         Debug.Log(hitGO.GetComponent<Stats>().cur_health);
-        //rb.AddForceAtPosition(force, transform.position); // Don't know what this is supposed to be doing here.
     }
 
     private void CalculateVelocity(float deltaTime)

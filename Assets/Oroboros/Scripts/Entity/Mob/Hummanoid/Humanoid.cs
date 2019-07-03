@@ -49,12 +49,13 @@ public class Humanoid : Mob
             leftHand.StopUsingHand();
         }
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle") && rightHand.isUsingHand())
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle") && rightHand.isUsingHand() )
         {
             rightHand.StopUsingHand();
         }
 
-        if(leftHandInput > 0)
+
+        if (leftHandInput > 0)
         {
             if(leftHand.GetItemType() == ItemType.MELEE && state == HumanoidState.Combat)
             {
@@ -87,6 +88,13 @@ public class Humanoid : Mob
         else
         {
             anim.SetBool("IsPerformingAction", false);
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("FinishedAction"))
+        {
+            Debug.Log("InFinishedAction");
+            anim.SetBool("IsPerformingAction", false);
+            //TODO: This isn't working right, it's not properly getting set to false, I cannot seem to figure out why it seems to be getting set to true again the same process as this sets it to false? 
         }
     }
 
