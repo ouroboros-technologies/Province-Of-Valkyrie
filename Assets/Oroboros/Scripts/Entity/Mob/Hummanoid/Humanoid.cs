@@ -39,7 +39,6 @@ public class Humanoid : Mob
         if(!isLocalPlayer) return;
         base.Update();
         UseHands();
-        anim.SetTrigger("HorSwing");
     }
 
     private void UseHands()
@@ -47,11 +46,13 @@ public class Humanoid : Mob
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle") && leftHand.isUsingHand())
         {
             leftHand.StopUsingHand();
+            setStartDirectionPosition();
         }
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle") && rightHand.isUsingHand() )
         {
             rightHand.StopUsingHand();
+            Debug.Log(getAttackDirection());
         }
 
 

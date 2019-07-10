@@ -34,6 +34,10 @@ public class Mob : NetworkBehaviour
     Quaternion lookDirection;
     Vector3 lookAxis;
 
+    //mouse position variable 
+    protected Vector3 mousePosStart;
+    protected Quaternion startRotation;
+
     public float xClampAngle = 90.0f;
     protected float xAxisClamp;
 
@@ -121,6 +125,20 @@ public class Mob : NetworkBehaviour
             Vector3 rotation = new Vector3(0, 0, (Mathf.Rad2Deg * Mathf.Atan2(lookAxis.y, lookAxis.x)) - 270);
             lookDirection = Quaternion.Euler(rotation);
         }
+    }
+
+    //sets the initial vector to the the forward point for the camera
+    public void setStartDirectionPosition()
+    {
+        mousePosStart = cam.transform.forward;
+        startRotation = cam.transform.rotation;
+    }
+
+    //returns an angle to discover attack direction *** Does not return angle from point to point instead it is directional based so another calculation is needed
+    public float getAttackDirection()
+    {
+        float attackAngle = Quaternion.Angle(startRotation, cam.transform.rotation);
+        return attackAngle; 
     }
 
     public void SetVerticalLookInput(float input)
